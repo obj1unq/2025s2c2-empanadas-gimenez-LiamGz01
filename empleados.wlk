@@ -1,5 +1,8 @@
 object galvan {
   var sueldo = 15000 
+  var totalCobrado = 0
+  var deuda = 0
+  var dinero = 0  
 
   method sueldo() { // pago de sueledo
     return sueldo
@@ -8,6 +11,20 @@ object galvan {
   method sueldo(_sueldo) { // cambio de sueldo en galvan 
     sueldo = _sueldo
   } 
+  method totalCobrado() {
+    totalCobrado = sueldo + self.sueldo()
+  }
+
+  method gastar(cuanto) {
+    totalCobrado = totalCobrado - cuanto
+  }
+  method deuda(deuda) {
+    deuda = totalCobrado - deuda
+  }
+
+  method dinero() {
+    dinero = 
+  }
 }
 
 object baigorria {
@@ -20,11 +37,17 @@ object baigorria {
   } 
   method sueldo() {         //sueldo de baigorria
     sueldo = cantidadEmpanadasVendidas * 15
+    cantidadEmpanadasVendidas = 0
     return sueldo         //retorna sueldo
   }
 
   method empanadasVendidas(_cantidad) {
-    cantidadEmpanadasVendidas = _cantidad
+    cantidadEmpanadasVendidas = cantidadEmpanadasVendidas + _cantidad
+  }
+
+  method toatlCobrado() {
+    sueldo = sueldo + self.sueldo()
+
   }
 
 }
