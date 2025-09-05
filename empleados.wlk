@@ -20,7 +20,7 @@ object baigorria {
   } 
   method sueldo() {         //sueldo de baigorria
     sueldo = cantidadEmpanadasVendidas * 15
-    return sueldo
+    return sueldo         //retorna sueldo
   }
 
   method empanadasVendidas(_cantidad) {
